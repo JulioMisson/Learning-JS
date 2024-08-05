@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprendendo DOM</title>
+    <style>
+        body{
+            background-color: aliceblue;
+            font: normal 18pt arial;
+        
+        }
+    </style>
+</head>
+<body>
+    <h1>Aprendendo DOM</h1>
+    <P>Aqui vai o resultado</P>
+    <P id="p2">Aprendendo a usar o <b id="B">DOM</b> em javaScript</P>
+<div>CLique em mim</div>
+
+    
+    
+    <script>
+        var p1 = document.getElementsByTagName('p')[0];
+       p1.style.color = 'blue';
+       
+       var p2 = document.getElementById('p2');
+       p2.style.color = 'pink';
+
+       var B = document.getElementById('B');
+       B.style.color = 'red';
+
+    </script>
+</body>
+</html>
