@@ -6,13 +6,16 @@
     <title>Eventod DOM</title>
     <style>
         div#area {
-            font: normal 20pt Arial;
-            background: blue;
+            display: flex;
+            border: solid red 1px;
             width: 200px;
-            height: 200px;
-            line-height: 200px;
-            text-align: center;
+            height: 50px;
+            justify-content: center;
+            align-items: center;
+            background-image:linear-gradient(100deg, red, green);
+            background-size: 100% 100%;
         }
+
     </style>
 </head>
 <body>
@@ -28,17 +31,20 @@
 
         function entrar() {
             a.innerText = 'Entrou!'
-            a.style.backgroundColor = 'red'
+            a.style.backgroundImage = 'linear-gradient(100deg, green, red)';
+            a.style.transitionDelay = '1s'
         }
 
         function sair() {
             a.innerText = 'Saiu!'
-            a.style.backgroundColor = 'blue'
+            a.style.backgroundImage = 'linear-gradient(100deg, red, green)';
+            a.style.transitionDelay = '1s'
+            
         }
 
         function clicar() {
             a.innerText = 'Clicou!'
-            a.style.backgroundColor = 'green'
+            a.style.backgroundImage = 'Linear-gradient(100deg, yellow, orange)'
         }
 
     
