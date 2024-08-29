@@ -1,9 +1,10 @@
 function carregar() {
 var msg = document.getElementById('msg')
 var img = document.getElementById('imagem')
-var data = new Date()
-var hora = data.getHours()
-    msg.innerHTML = `Agora são ${hora} horas`
+//var data = new Date()
+var hora = 21
+
+msg.innerHTML = `Agora são ${hora} horas`
 
     if(hora<12){
         msg.innerHTML = `Bom dia, agora são ${hora} horas`
