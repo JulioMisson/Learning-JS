@@ -10,3 +10,8 @@ while (c <=100 ){
     console.log(`passo ${c}`)
     c++
 } */
+
+    
+// Aqui, o valor de `b` ainda será 12 após o loop.
+
+
