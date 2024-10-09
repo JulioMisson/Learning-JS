@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionar Números à Lista</title>
+</head>
+<body>
+    <h2>Digite um número para adicionar à lista:</h2>
+    <input type="number" id="inputNumero" placeholder="Digite um número">
+    <button onclick="adicionarNumero()">Adicionar</button>
+
+    <h3>Lista de Números:</h3>
+    <ul id="listaNumeros"></ul> <!-- Lista visível no HTML -->
+
+    <script>
+        // Array que vai armazenar os números
+        let numeros = [];
+
+        // Função que adiciona um número ao array e atualiza a lista
+        function adicionarNumero() {
+            let numero = document.getElementById("inputNumero").value; // Pega o número do input
+
+            if (numero !== "") { // Verifica se o input não está vazio
+                numeros.push(numero); // Adiciona o número ao array
+                atualizarLista(); // Atualiza a lista visível
+                document.getElementById("inputNumero").value = ""; // Limpa o campo input
+            } else {
+                alert("Por favor, insira um número.");
+            }
+        }
+
+        // Função que atualiza a lista visível no HTML
+        function atualizarLista() {
+            let lista = document.getElementById("listaNumeros");
+            lista.innerHTML = ""; // Limpa a lista antes de adicionar os novos itens
+
+            // Itera sobre o array e adiciona cada número como um item da lista
+            numeros.forEach(function(numero) {
+                let item = document.createElement("li"); // Cria um novo item de lista
+                item.textContent = numero; // Define o conteúdo do item
+                lista.appendChild(item); // Adiciona o item à lista visível
+            });
+        }
+    </script>
+</body>
+</html>

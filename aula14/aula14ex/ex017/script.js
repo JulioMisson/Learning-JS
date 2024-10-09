@@ -17,3 +17,5 @@ function gerartabuada() {
         seltab.appendChild(option); // Adiciona a opção no <select>
     }
 }
+
+
